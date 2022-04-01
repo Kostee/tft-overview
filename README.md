@@ -1,7 +1,9 @@
 # About The Project
 The repository contains some code to understand and test the state-of-the-art architecture for Interpretable Multi-horizon Time Series Forecasting, proposed by Google in 2019. The mini-project was created for a recruiting assignment.
 
-Authors: Bryan Lim, Sercan Arik, Nicolas Loeff and Tomas Pfister
+**Full article name**: Temporal Fusion Transformers for interpretable multi-horizon time series forecasting
+
+**Authors**: Bryan Lim, Sercan Arik, Nicolas Loeff and Tomas Pfister
 
 # Useful links
 1. [Full paper available online](https://www.sciencedirect.com/science/article/pii/S0169207021000637)
