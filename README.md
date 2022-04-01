@@ -4,9 +4,6 @@ The repository contains some code to understand and test the state-of-the-art ar
 Authors: Bryan Lim, Sercan Arik, Nicolas Loeff and Tomas Pfister
 
 # Useful links
-1. Full paper available online
-https://www.sciencedirect.com/science/article/pii/S0169207021000637
-2. Toward Data Science's article
-https://towardsdatascience.com/temporal-fusion-transformer-googles-model-for-interpretable-time-series-forecasting-5aa17beb621
-3. Project's GitHub
-https://github.com/greatwhiz/tft_tf2
+1. ![Full paper available online](https://www.sciencedirect.com/science/article/pii/S0169207021000637)
+2. ![Toward Data Science's article](https://towardsdatascience.com/temporal-fusion-transformer-googles-model-for-interpretable-time-series-forecasting-5aa17beb621)
+3. ![Project's GitHub](https://github.com/greatwhiz/tft_tf2)
