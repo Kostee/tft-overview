@@ -43,7 +43,7 @@ iv) **close** - end-of-day value
 
 After downloading data, a few actions have been made in *manually_downloaded_data/format_manually_downloaded.ipynb* script. The code consists operations such as:
 - connecting 30 manually downloaded files 
-- having all the data in one in one Pandas DataFrame, containing all the dates since April 2nd, 2012 to April 1st, 2022
+- having all the data in one Pandas DataFrame, containing all the dates since April 2nd, 2012 to April 1st, 2022
 - generating summaries and visualizations, including correlation matrix and NA value information
 
 # Problems with Google repositorium
