@@ -11,7 +11,7 @@ The repository contains some code to understand and test the state-of-the-art ar
 3. [Project's GitHub](https://github.com/google-research/google-research/tree/master/tft)
 
 # Code Organisation
-- *google_repo* directory contains files directly copied from the official Google Research repository
+- *google_repo* directory contains files directly copied from the official Google Research repository. **Attention!** Original scripts cloned contains some bugs, mostly caused by changes in new versions of *TensorFlo*w, for which the code has not yet been adapted. Therefore, in many places the code is modified to work as of April 2022.
 - *google_data* consists of data files created with the help of the Google tutorial
 - *manually_download_data* concerns manually downloaded data for the project and scrippt formatting
 
