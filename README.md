@@ -10,11 +10,13 @@ The repository contains code to understand and test the state-of-the-art archite
 1. [Full paper available online](https://arxiv.org/pdf/1912.09363.pdf)
 2. [Toward Data Science's article](https://towardsdatascience.com/temporal-fusion-transformer-googles-model-for-interpretable-time-series-forecasting-5aa17beb621)
 3. [Project's GitHub](https://github.com/google-research/google-research/tree/master/tft)
+4. [Forecasting tutorial with *sktime*](https://www.sktime.org/en/stable/examples/01_forecasting.html)
 
 ## Code Organisation
 - *google_repo* directory contains files directly copied from the official Google Research repository
 - *data* consists of data files: both created with the help of the Google tutorial and generated manually (economicy/ directory)
 - *manually_download_data* concerns manually downloaded data for the project and scripts formatting them, together with external data detailing the dates
+- *saved_models* includes automatically generated files after running *script_train_fixed_params* script
 
 Out of four available datasets prepared by Google for testing their solution, three were successfully downloaded to the hard drive (except for *favorita*), while only *volaitte* is available on GitHub due to its limitations (no more than 100 MB per file). Others have to be downloaded manually with the help of a tutorial available on the official repository.
 
