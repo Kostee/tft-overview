@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Lint as: python3
-"""Default configs for TFT experiments.
+"""Default configs for TFT exRperiments.
 
 Contains the default output paths for data, serialised models and predictions
 for the main experiments used in the publication.
@@ -42,7 +42,7 @@ class ExperimentConfig(object):
       experiment.
   """
 
-  default_experiments = ['volatility', 'electricity', 'traffic', 'favorita']
+  default_experiments = ['volatility', 'electricity', 'traffic', 'favorita', 'economy']
 
   def __init__(self, experiment='volatility', root_folder=None):
     """Creates configs based on default experiment chosen.
@@ -81,15 +81,18 @@ class ExperimentConfig(object):
         'volatility': 'formatted_omi_vol.csv',
         'electricity': 'hourly_electricity.csv',
         'traffic': 'hourly_data.csv',
-        'favorita': 'favorita_consolidated.csv'
+        'favorita': 'favorita_consolidated.csv',
+        'economy': 'economy_manual.csv'
     }
 
     return os.path.join(self.data_folder, csv_map[self.experiment])
 
   @property
   def hyperparam_iterations(self):
-
-    return 240 if self.experiment == 'volatility' else 60
+      if self.experiment == 'example':
+          return 100
+      else:
+            return 240 if self.experiment == 'volatility' else 60
 
   def make_data_formatter(self):
     """Gets a data formatter object for experiment.
@@ -102,7 +105,8 @@ class ExperimentConfig(object):
         'volatility': data_formatters.volatility.VolatilityFormatter,
         'electricity': data_formatters.electricity.ElectricityFormatter,
         'traffic': data_formatters.traffic.TrafficFormatter,
-        'favorita': data_formatters.favorita.FavoritaFormatter
+        'favorita': data_formatters.favorita.FavoritaFormatter,
+        'economy': data_formatters.favorita.EconomyFormatter
     }
 
     return data_formatter_class[self.experiment]()

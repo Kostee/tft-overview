@@ -33,7 +33,7 @@ import data_formatters.base
 import libs.utils as utils
 import numpy as np
 import pandas as pd
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 # Layer definitions.
 concat = tf.keras.backend.concatenate
@@ -939,7 +939,7 @@ class TemporalFusionTransformer(object):
     def get_lstm(return_state):
       """Returns LSTM cell initialized with default parameters."""
       if self.use_cudnn:
-        lstm = tf.keras.layers.CuDNNLSTM(
+        lstm = tf.keras.layers.LSTM(
             self.hidden_layer_size,
             return_sequences=True,
             return_state=return_state,
@@ -1036,7 +1036,7 @@ class TemporalFusionTransformer(object):
       Fully defined Keras model.
     """
 
-    with tf.variable_scope(self.name):
+    with tf.compat.v1.variable_scope(self.name):
 
       transformer_layer, all_inputs, attention_components \
           = self._build_base_graph()
@@ -1282,7 +1282,7 @@ class TemporalFusionTransformer(object):
       input_placeholder = self._input_placeholder
       attention_weights = {}
       for k in self._attention_components:
-        attention_weight = tf.keras.backend.get_session().run(
+        attention_weight = tf.compat.v1.keras.backend.get_session().run(
             self._attention_components[k],
             {input_placeholder: input_batch.astype(np.float32)})
         attention_weights[k] = attention_weight
@@ -1348,7 +1348,7 @@ class TemporalFusionTransformer(object):
     # when model is reloaded (https://github.com/keras-team/keras/issues/4875).
 
     utils.save(
-        tf.keras.backend.get_session(),
+        tf.compat.v1.keras.backend.get_session(),
         model_folder,
         cp_name=self.name,
         scope=self.name)
@@ -1371,7 +1371,7 @@ class TemporalFusionTransformer(object):
     else:
       # Loads tensorflow graph for optimal models.
       utils.load(
-          tf.keras.backend.get_session(),
+          tf.compat.v1.keras.backend.get_session(),
           model_folder,
           cp_name=self.name,
           scope=self.name)
