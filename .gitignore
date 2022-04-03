@@ -29,3 +29,15 @@ google_repo/expt_settings/__pycache__/configs.cpython-310.pyc
 google_repo/libs/__pycache__/utils.cpython-310.pyc
 google_repo/libs/__pycache__/__init__.cpython-310.pyc
 google_repo/__pycache__/script_download_data.cpython-310.pyc
+google_data/data/traffic/stations_list
+google_data/data/traffic/randperm
+google_data/data/traffic/PEMS_trainlabels
+google_data/data/traffic/PEMS_testlabels
+google_data/data/traffic/PEMS_train
+google_data/data/traffic/PEMS_test
+google_data/data/traffic/PEMS-SF.zip
+google_data/data/traffic/hourly_data.csv
+google_data/data/electricity/LD2011_2014.txt.zip
+google_data/data/electricity/LD2011_2014.txt
+google_data/data/electricity/hourly_electricity.csv
+google_data/data/electricity/__MACOSX/._LD2011_2014.txt
