@@ -1,4 +1,4 @@
-# About The Project
+# Temporal Fusion Transformers - About The Project
 The repository contains some code to understand and test the state-of-the-art architecture for Interpretable Multi-horizon Time Series Forecasting, proposed by Google in 2020. This mini-project was created for a recruiting assignment.
 
 **Full article name**: Temporal Fusion Transformers for interpretable multi-horizon time series forecasting
