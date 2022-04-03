@@ -11,9 +11,11 @@ The repository contains some code to understand and test the state-of-the-art ar
 3. [Project's GitHub](https://github.com/google-research/google-research/tree/master/tft)
 
 # Code Organisation
-- *google_repo* directory contains files directly copied from the official Google Research repository. **Attention!** 
+- *google_repo* directory contains files directly copied from the official Google Research repository
 - *google_data* consists of data files created with the help of the Google tutorial
-- *manually_download_data* concerns manually downloaded data for the project and scrippt formatting
+- *manually_download_data* concerns manually downloaded data for the project and scrippt formatting them
+
+Out of four available datasets prepared by Google for testing their solution, three were successfully downloaded to the hard drive (except for *favorita*), while only *volaitte* is available on GitHub due to its limitations. Others have to be downloaded manually with the help of a tutorial available on the official repository.
 
 # Recruitment task data
 
