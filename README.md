@@ -27,7 +27,7 @@ b) **Gold Price in USD** - Gold
 
 c) **EUR to USD Exchange Rate** - EURUSD
 
-All indexes were downloaded from the [MarketWatch website](https://www.marketwatch.com/). Unfortunately, values got this way include NA values - mainly on weekends. Another limitation was the inability to download a larger range of data than one year - to this end, ten *.csv* (for ten years) files were manually downloaded for each of the three indexes, which were then processed and merged.
+All indexes were downloaded from the [MarketWatch website](https://www.marketwatch.com/). Unfortunately, values got this way include NA values - mainly on weekends. Another limitation was the inability to download a larger range of data than one year - to this end, ten (for ten years) *.csv*files were manually downloaded for each of the three indexes, which were then processed and merged.
 
 Each day and index consists of four numbers:
 
@@ -46,7 +46,7 @@ After downloading data, a few actions have been made in *manually_downloaded_dat
 - having all the data in one Pandas DataFrame, containing all the dates since April 2nd, 2012 to April 1st, 2022
 - generating summaries and visualizations, including correlation matrix and NA value information
 
-# Problems with Google repositorium
+# Problems with Google repository
 Original scripts cloned contains some bugs, mostly caused by changes in new versions of *TensorFlo*w, for which the code has not yet been adapted. Therefore, in many places the code is modified to work as of April 2022.
 
 Also, some packages had to be installed to old versions - eg. scikit-learn to 0.24.2
