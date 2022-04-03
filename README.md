@@ -30,7 +30,7 @@ b) **Gold Price in USD** - Gold
 
 c) **EUR to USD Exchange Rate** - EURUSD
 
-All indexes were downloaded from the [MarketWatch website](https://www.marketwatch.com/). Unfortunately, values got this way include NA values - mainly on weekends. Another limitation was the inability to download a larger range of data than one year - to this end, ten (for ten years) *.csv* files were manually downloaded for each of the three indexes, which were then processed and merged.
+All indexes were downloaded from the [MarketWatch website](https://www.marketwatch.com/). Unfortunately, values got this way include NA values - fortunately mainly on weekends, on which they are naturally not available. Another limitation was the inability to download a larger range of data than one year - to this end, ten (for ten years) *.csv* files were manually downloaded for each of the three indexes, which were then processed and merged.
 
 Each day and index consists of four numbers:
 
