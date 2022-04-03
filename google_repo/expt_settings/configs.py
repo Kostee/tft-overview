@@ -23,7 +23,7 @@ for the main experiments used in the publication.
 import os
 
 import data_formatters.electricity
-import data_formatters.favorita
+import data_formatters.economy
 import data_formatters.traffic
 import data_formatters.volatility
 
@@ -81,7 +81,6 @@ class ExperimentConfig(object):
         'volatility': 'formatted_omi_vol.csv',
         'electricity': 'hourly_electricity.csv',
         'traffic': 'hourly_data.csv',
-        'favorita': 'favorita_consolidated.csv',
         'economy': 'economy_manual.csv'
     }
 
@@ -105,8 +104,7 @@ class ExperimentConfig(object):
         'volatility': data_formatters.volatility.VolatilityFormatter,
         'electricity': data_formatters.electricity.ElectricityFormatter,
         'traffic': data_formatters.traffic.TrafficFormatter,
-        'favorita': data_formatters.favorita.FavoritaFormatter,
-        'economy': data_formatters.favorita.EconomyFormatter
+        'economy': data_formatters.economy.EconomyFormatter
     }
 
     return data_formatter_class[self.experiment]()

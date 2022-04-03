@@ -38,16 +38,31 @@ class EconomyFormatter(GenericDataFormatter):
   """
 
   _column_definition = [
-      ('Symbol', DataTypes.CATEGORICAL, InputTypes.ID),
-      ('date', DataTypes.DATE, InputTypes.TIME),
-      ('log_vol', DataTypes.REAL_VALUED, InputTypes.TARGET),
-      ('open_to_close', DataTypes.REAL_VALUED, InputTypes.OBSERVED_INPUT),
-      ('days_from_start', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),
-      ('day_of_week', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT),
-      ('day_of_month', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT),
-      ('week_of_year', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT),
-      ('month', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT),
-      ('Region', DataTypes.CATEGORICAL, InputTypes.STATIC_INPUT),
+      ('ID', DataTypes.REAL_VALUED, InputTypes.ID),
+
+      ('Date', DataTypes.DATE, InputTypes.TIME),
+      ('Open_SP500', DataTypes.REAL_VALUED, InputTypes.TARGET),  # input value??
+      ('High_SP500', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),  # input value??
+      ('Low_SP500', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),  # input value??
+      ('Close_SP500', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),  # input value??
+      ('Open_Gold', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),  # input value??
+      ('High_Gold', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),  # input value??
+      ('Low_Gold', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),  # input value??
+      ('Close_Gold', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),  # input value??
+      ('Open_EURUSD', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),  # input value??
+      ('High_EURUSD', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),  # input value??
+      ('Low_EURUSD', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),  # input value??
+      ('Close_EURUSD', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),  # input value??
+
+      ('Day', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT),
+      ('Weekday', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT),
+      ('Is_weekend', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT), # ???
+      ('Is_holiday', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT),  # ???
+      ('Week_of_month', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT), # ???
+      ('Week_of_year', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT),
+      ('Month', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT),
+      ('Quarter', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT),
+      ('Year', DataTypes.CATEGORICAL, InputTypes.KNOWN_INPUT) # ???
   ]
 
   def __init__(self):
@@ -59,7 +74,7 @@ class EconomyFormatter(GenericDataFormatter):
     self._target_scaler = None
     self._num_classes_per_cat_input = None
 
-  def split_data(self, df, valid_boundary=2016, test_boundary=2018):
+  def split_data(self, df, valid_boundary=2019, test_boundary=2021):
     """Splits data frame into training-validation-test data frames.
 
     This also calibrates scaling object, and transforms data for each split.
@@ -75,10 +90,10 @@ class EconomyFormatter(GenericDataFormatter):
 
     print('Formatting train-valid-test splits.')
 
-    index = df['year']
+    index = df['Year']
     train = df.loc[index < valid_boundary]
     valid = df.loc[(index >= valid_boundary) & (index < test_boundary)]
-    test = df.loc[(index >= test_boundary) & (df.index <= '2019-06-28')]
+    test = df.loc[(index >= test_boundary)]  # ???
 
     self.set_scalers(train)
 
@@ -191,7 +206,7 @@ class EconomyFormatter(GenericDataFormatter):
     fixed_params = {
         'total_time_steps': 252 + 5,
         'num_encoder_steps': 252,
-        'num_epochs': 100,
+        'num_epochs': 5,
         'early_stopping_patience': 5,
         'multiprocessing_workers': 5,
     }
