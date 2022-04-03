@@ -59,4 +59,11 @@ import tensorflow as tf
 ```py
 import tensorflow.compat.v1 as tf
 ```
-Also, some packages had to be installed to old versions - eg. scikit-learn to 0.24.2
+
+... with addition of:
+
+```py
+tf.compat.v1.experimental.output_all_intermediates(True)
+```
+
+in a few scripts. Also, some packages had to be installed to old versions - eg. *scikit-learn* to 0.24.2
