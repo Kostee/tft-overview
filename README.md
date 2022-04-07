@@ -75,7 +75,7 @@ tf.compat.v1.experimental.output_all_intermediates(True)
 
 in a few scripts. Also, some packages had to be installed to old versions - eg. *scikit-learn* to 0.24.2. In the end it was again updated to the latest version, but this did not affect the result.
 
-### Version 0.2 - Sunday, April 7th
+### Version 0.2 - Thursday, April 7th
 
 New idea came to my mind - maybe old versions of TenserFlow are not compatible with part of the code? That's why I changed my idea.
 
