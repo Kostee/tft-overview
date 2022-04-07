@@ -73,7 +73,7 @@ import tensorflow.compat.v1 as tf
 tf.compat.v1.experimental.output_all_intermediates(True)
 ```
 
-in a few scripts. Also, some packages had to be installed to old versions - eg. *scikit-learn* to 0.24.2
+in a few scripts. Also, some packages had to be installed to old versions - eg. *scikit-learn* to 0.24.2. In the end it was again updated to the latest version, but this did not affect the result.
 
 ### Version 0.2 - Sunday, April 7th
 
@@ -107,3 +107,7 @@ Traceback (most recent call last):
   File "<__array_function__ internals>", line 180, in concatenate
 ValueError: zero-dimensional arrays cannot be concatenated
 ```
+
+Related issue: https://github.com/google-research/google-research/issues/801
+
+The above discussion suggests that the problem is in the *split_data* function from the Economy DataFormatter, whereas I don't think that is the problem.
