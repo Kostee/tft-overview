@@ -111,3 +111,9 @@ ValueError: zero-dimensional arrays cannot be concatenated
 Related issue: https://github.com/google-research/google-research/issues/801
 
 The above discussion suggests that the problem is in the *split_data* function from the Economy DataFormatter, whereas I don't think that is the problem.
+
+## Other users' codes
+
+Despite forking the Google repository by several thousand users, I only found any changes to the */tft* directory itself in a few cases. None of these, however, contained an implementation of any other than four of the proposed datasets...
+
+However, it turned out that the code itself was implemented in a different way! The solution was at least prepared by user **KalleBylin**, as Master of Data Science ML Project. His solution which is available in one *.ipynb* file and seems to work, can be found at [this link](https://github.com/KalleBylin/temporal-fusion-transformers). I included it also in this repositorium, named *KatteBylinSolution.ipynb* in the main directory.
