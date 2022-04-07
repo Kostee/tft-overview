@@ -81,7 +81,7 @@ New idea came to my mind - maybe old versions of TenserFlow are not compatible w
 
 Second *gooogle_repo was* copied, once again from original source. The old one was renamed to *google_repo_old* and in this variant I decided to import two TenserFlows package:
 
-```
+```py
 import tensorflow as tf
 import tensorflow.compat.v1 as tf1
 ```
