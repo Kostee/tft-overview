@@ -51,7 +51,11 @@ After downloading data, a few actions have been made in *manually_downloaded_dat
 - merging dataset containing all the available daily data from last 10 years with detailed dates' data frame
 
 ## Problems with Google repository
-Original scripts cloned contains some bugs, mostly caused by changes in new versions of *TensorFlow*, for which the code has not yet been adapted. Therefore, in many places the code is modified to work as of April 2022. Among others, due to chenges in *TensorFlow*, in all the scripts importing package line:
+Original scripts cloned contains some bugs, mostly caused by changes in new versions of *TensorFlow*, for which the code has not yet been adapted. Therefore, in many places the code is modified to work as of April 2022.
+
+### Version 0.1 - Sunday, April 3rd
+
+Among others, due to chenges in *TensorFlow*, in all the scripts importing package line:
 
 ```py
 import tensorflow as tf
@@ -69,4 +73,47 @@ import tensorflow.compat.v1 as tf
 tf.compat.v1.experimental.output_all_intermediates(True)
 ```
 
-in a few scripts. Also, some packages had to be installed to old versions - eg. *scikit-learn* to 0.24.2
+in a few scripts. Also, some packages had to be installed to old versions - eg. *scikit-learn* to 0.24.2. In the end it was again updated to the latest version, but this did not affect the result.
+
+### Version 0.2 - Sunday, April 7th
+
+New idea came to my mind - maybe old versions of TenserFlow are not compatible with part of the code? That's why I changed my idea.
+
+Second *gooogle_repo was* copied, once again from original source. The old one was renamed to *google_repo_old* and in this variant I decided to import two TenserFlows package:
+
+```
+import tensorflow as tf
+import tensorflow.compat.v1 as tf1
+```
+
+In most of TenserFlows references I use the first one. *tf* was changed to *tf1* only in cases of error attribute errors, which were repaired by referencing to the old version.
+
+However - the final effect ended up the same :(
+
+```console
+Traceback (most recent call last):
+  File "C:\Users\koste\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\koste\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\koste\Studia\10\JOB\7bulls\tft-overview\google_repo\script_train_fixed_params.py", line 234, in <module>
+    main(
+  File "C:\Users\koste\Studia\10\JOB\7bulls\tft-overview\google_repo\script_train_fixed_params.py", line 153, in main
+    val_loss = model.evaluate(valid)
+  File "C:\Users\koste\Studia\10\JOB\7bulls\tft-overview\google_repo\libs\tft_model.py", line 1191, in evaluate
+    raw_data = self._batch_data(data)
+  File "C:\Users\koste\Studia\10\JOB\7bulls\tft-overview\google_repo\libs\tft_model.py", line 765, in _batch_data
+    data_map[k] = np.concatenate(data_map[k], axis=0)
+  File "<__array_function__ internals>", line 180, in concatenate
+ValueError: zero-dimensional arrays cannot be concatenated
+```
+
+Related issue: https://github.com/google-research/google-research/issues/801
+
+The above discussion suggests that the problem is in the *split_data* function from the Economy DataFormatter, whereas I don't think that is the problem.
+
+## Other users' codes
+
+Despite forking the Google repository by several thousand users, I only found any changes to the */tft* directory itself in a few cases. None of these, however, contained an implementation of any other than four of the proposed datasets...
+
+However, it turned out that the code itself was implemented in a different way! The solution was at least prepared by user **KalleBylin**, as Master of Data Science ML Project. His solution which is available in one *.ipynb* file and seems to work, can be found at [this link](https://github.com/KalleBylin/temporal-fusion-transformers). I included it also in this repositorium, named *KatteBylinSolution.ipynb* in the main directory.
