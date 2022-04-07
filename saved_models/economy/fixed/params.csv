@@ -1,0 +1,22 @@
+,"[31, 7, 2, 6, 53, 12, 4, 1]_[('Days_from_start', <DataTypes.REAL_VALUED: 0>, <InputTypes.ID: 4>), ('Date', <DataTypes.DATE: 2>, <InputTypes.TIME: 5>), ('Open_SP500', <DataTypes.REAL_VALUED: 0>, <InputTypes.TARGET: 0>), ('Day', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Weekday', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Is_holiday', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Week_of_month', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Week_of_year', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Month', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Quarter', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Country', <DataTypes.CATEGORICAL: 1>, <InputTypes.STATIC_INPUT: 3>)]_0.3_5_5_[0]_9_[0, 1, 2, 3, 4, 5, 6, 7]_[]_0.01_0.01_64_../saved_models\economy\fixed_5_252_1_1_1_1_[8]_257"
+dropout_rate,0.3
+hidden_layer_size,5
+learning_rate,0.01
+max_gradient_norm,0.01
+minibatch_size,64
+model_folder,../saved_models\economy\fixed
+num_heads,1
+stack_size,1
+total_time_steps,257
+num_encoder_steps,252
+num_epochs,1
+early_stopping_patience,5
+multiprocessing_workers,5
+column_definition,"[('Days_from_start', <DataTypes.REAL_VALUED: 0>, <InputTypes.ID: 4>), ('Date', <DataTypes.DATE: 2>, <InputTypes.TIME: 5>), ('Open_SP500', <DataTypes.REAL_VALUED: 0>, <InputTypes.TARGET: 0>), ('Day', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Weekday', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Is_holiday', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Week_of_month', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Week_of_year', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Month', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Quarter', <DataTypes.CATEGORICAL: 1>, <InputTypes.KNOWN_INPUT: 2>), ('Country', <DataTypes.CATEGORICAL: 1>, <InputTypes.STATIC_INPUT: 3>)]"
+input_size,9
+output_size,1
+category_counts,"[31, 7, 2, 6, 53, 12, 4, 1]"
+input_obs_loc,[0]
+static_input_loc,[8]
+known_regular_inputs,[]
+known_categorical_inputs,"[0, 1, 2, 3, 4, 5, 6, 7]"

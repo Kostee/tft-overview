@@ -60,3 +60,23 @@ google_repo/libs/__pycache__/hyperparam_opt.cpython-310.pyc
 google_repo/libs/__pycache__/tft_model.cpython-310.pyc
 manually_downloaded_data/.ipynb_checkpoints/format_manually_downloaded-checkpoint.ipynb
 manually_downloaded_data/format_manually_downloaded.ipynb
+.ipynb_checkpoints/Temporal Fusion Transformer-checkpoint.ipynb
+individual_learning/sktime-package.ipynb
+individual_learning/.ipynb_checkpoints/sktime-package-checkpoint.ipynb
+google_repo_old/libs/__pycache__/utils.cpython-310.pyc
+google_repo_old/libs/__pycache__/tft_model.cpython-310.pyc
+google_repo_old/libs/__pycache__/hyperparam_opt.cpython-310.pyc
+google_repo_old/libs/__pycache__/__init__.cpython-310.pyc
+google_repo_old/expt_settings/__pycache__/configs.cpython-310.pyc
+google_repo_old/expt_settings/__pycache__/__init__.cpython-310.pyc
+google_repo_old/data_formatters/__pycache__/volatility.cpython-310.pyc
+google_repo_old/data_formatters/__pycache__/traffic.cpython-310.pyc
+google_repo_old/data_formatters/__pycache__/favorita.cpython-310.pyc
+google_repo_old/data_formatters/__pycache__/electricity.cpython-310.pyc
+google_repo_old/data_formatters/__pycache__/economy.cpython-310.pyc
+google_repo_old/data_formatters/__pycache__/base.cpython-310.pyc
+google_repo_old/data_formatters/__pycache__/__init__.cpython-310.pyc
+google_repo_old/__pycache__/script_train_fixed_params.cpython-310.pyc
+google_repo_old/__pycache__/script_hyperparam_opt.cpython-310.pyc
+google_repo_old/__pycache__/script_download_data.cpython-310.pyc
+data/~$help_comparison.ods

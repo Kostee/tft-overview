@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Lint as: python3
-"""Default configs for TFT exRperiments.
+"""Default configs for TFT experiments.
 
 Contains the default output paths for data, serialised models and predictions
 for the main experiments used in the publication.
@@ -23,10 +23,10 @@ for the main experiments used in the publication.
 import os
 
 import data_formatters.electricity
-import data_formatters.economy
+import data_formatters.favorita
 import data_formatters.traffic
 import data_formatters.volatility
-
+import data_formatters.economy
 
 class ExperimentConfig(object):
   """Defines experiment configs and paths to outputs.
@@ -81,6 +81,7 @@ class ExperimentConfig(object):
         'volatility': 'formatted_omi_vol.csv',
         'electricity': 'hourly_electricity.csv',
         'traffic': 'hourly_data.csv',
+        'favorita': 'favorita_consolidated.csv',
         'economy': 'economy_manual.csv'
     }
 
@@ -88,10 +89,8 @@ class ExperimentConfig(object):
 
   @property
   def hyperparam_iterations(self):
-      if self.experiment == 'example':
-          return 100
-      else:
-            return 240 if self.experiment == 'volatility' else 60
+
+    return 240 if self.experiment == 'volatility' else 60
 
   def make_data_formatter(self):
     """Gets a data formatter object for experiment.
@@ -104,6 +103,7 @@ class ExperimentConfig(object):
         'volatility': data_formatters.volatility.VolatilityFormatter,
         'electricity': data_formatters.electricity.ElectricityFormatter,
         'traffic': data_formatters.traffic.TrafficFormatter,
+        'favorita': data_formatters.favorita.FavoritaFormatter,
         'economy': data_formatters.economy.EconomyFormatter
     }
 
