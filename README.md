@@ -10,7 +10,8 @@ The repository contains code to understand and test the state-of-the-art archite
 1. [Full paper available online](https://arxiv.org/pdf/1912.09363.pdf)
 2. [Toward Data Science's article](https://towardsdatascience.com/temporal-fusion-transformer-googles-model-for-interpretable-time-series-forecasting-5aa17beb621)
 3. [Project's GitHub](https://github.com/google-research/google-research/tree/master/tft)
-4. [Forecasting tutorial with *sktime*](https://www.sktime.org/en/stable/examples/01_forecasting.html)
+4. [YouTube webinar about the paper](https://www.youtube.com/watch?v=M7O4VqRf8s4)
+5. [Forecasting tutorial with *sktime*](https://www.sktime.org/en/stable/examples/01_forecasting.html)
 
 ## Code Organisation
 - *google_repo* directory contains files directly copied from the official Google Research repository
@@ -117,3 +118,5 @@ The above discussion suggests that the problem is in the *split_data* function f
 Despite forking the Google repository by several thousand users, I only found any changes to the */tft* directory itself in a few cases. None of these, however, contained an implementation of any other than four of the proposed datasets...
 
 However, it turned out that the code itself was implemented in a different way! The solution was at least prepared by user **KalleBylin**, as Master of Data Science ML Project. His solution which is available in one *.ipynb* file and seems to work, can be found at [this link](https://github.com/KalleBylin/temporal-fusion-transformers). I included it also in this repositorium, named *KatteBylinSolution.ipynb* in the main directory.
+
+End of the day - at least on my computer - one epoch did not count in 12 hours :(
