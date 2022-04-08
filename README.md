@@ -20,7 +20,8 @@ Out of four available datasets prepared by Google for testing their solution, th
 2. [Toward Data Science's article](https://towardsdatascience.com/temporal-fusion-transformer-googles-model-for-interpretable-time-series-forecasting-5aa17beb621)
 3. [Project's GitHub](https://github.com/google-research/google-research/tree/master/tft)
 4. [YouTube webinar about the paper](https://www.youtube.com/watch?v=M7O4VqRf8s4)
-5. [Forecasting tutorial with *sktime*](https://www.sktime.org/en/stable/examples/01_forecasting.html)
+5. [Google AI blog: article about Interpretable Deep Learning for Time Series Forecasting](https://ai.googleblog.com/2021/12/interpretable-deep-learning-for-time.html)
+6. [Forecasting tutorial with *sktime*](https://www.sktime.org/en/stable/examples/01_forecasting.html)
 
 ## Recruitment task data
 
@@ -51,7 +52,7 @@ After downloading data, a few actions have been made in *manually_downloaded_dat
 - having all the data in one Pandas DataFrame, containing all the dates since April 2nd, 2012 to April 1st, 2022
 - generating summaries and visualizations, including correlation matrix and NA value information
 - merging dataset containing all the available daily data from last 10 years with detailed dates' data frame
-- some extra operations at the end of the code, with which I tried to solve the potential problem of bad input data format for the algorithm
+- some extra operations at the end of the code, with which I tried to solve the potential problem of bad input data format for the algorithm (removing NA values, adding artificial category, backward fill; in different configurations)
 
 ## Problems with Google repository
 Original scripts cloned contains some bugs, mostly caused by changes in new versions of *TensorFlow*, for which the code has not yet been adapted. Therefore, in many places the code is modified to work as of April 2022.
